@@ -62,3 +62,25 @@ kubernetes        ClusterIP      10.100.0.1     <none>
 ```
 
 Search in browser with 'a6ff4a29b604b4729bb1ef3be4433a0f-256914431.ap-south-1.elb.amazonaws.com:8085'
+
+
+
+### Monitoring this cluster using prometheus & grafana
+
+# add prometheus Helm repo
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+
+# add grafana Helm repo
+helm repo add grafana https://grafana.github.io/helm-charts
+
+```
+ ⚙ ca14@ca14s-MacBook-Air  ~/Documents/Infra/labs/angular_app_eks   master  kubectl create namespace prometheus
+namespace/prometheus created
+ ⚙ ca14@ca14s-MacBook-Air  ~/Documents/Infra/labs/angular_app_eks   master  kubectl get ns
+NAME              STATUS   AGE
+default           Active   4h20m
+kube-node-lease   Active   4h20m
+kube-public       Active   4h20m
+kube-system       Active   4h20m
+prometheus        Active   7s
+```
